@@ -1,126 +1,124 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    background: #edf2fb;
+body {
+  background: #faedcd;
 }
-button{
-    border: 0;
-    padding: 0;
-    font-family: inherit;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
+button {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
-.navbar{
-    position: fixed;
-    z-index: 1;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 95%x;
-    height: 64px;
-    background: #abc4ff;
-    border-radius: 10px;
-    color: #073b4c;
-    font-family: "Poppins";
-    box-sizing: border-box;
-    font-weight: 900;
-    font-size: 50px;
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%x;
+  height: 64px;
+  background: #d4a373;
+  border-radius: 10px;
+  color: #faedcd;
+  font-family: "Poppins";
+  box-sizing: border-box;
+  font-weight: 900;
+  font-size: 50px;
 }
-.navbar-overlay{
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #e2eafc;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s;
+.navbar-overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #faedcd;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
 }
-body.open .navbar-overlay{
-    visibility: visible;
-    opacity: 1;
+body.open .navbar-overlay {
+  visibility: visible;
+  opacity: 1;
 }
-.navbar-burger{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 64px;
-    height: 64px;
-    padding: 0;
-    font-size: 15px;
-    font-weight: bold;
+.navbar-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: bold;
 }
-.navbar-title{
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
+.navbar-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
-.navbar-menu{
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    translate: -100% 0;
-    width: 270px;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #ccdbfd;
-    visibility: hidden;
-    transition: translate 0.3s;
+.navbar-menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  translate: -100% 0;
+  width: 270px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #d4a373;
+  visibility: hidden;
+  transition: translate 0.3s;
 }
-body.open .navbar-menu{
+body.open .navbar-menu {
+  translate: 0 0;
+  visibility: visible;
+}
+.navbar-menu > button {
+  color: #fefae0;
+  background: transparent;
+  padding: 0 8px;
+}
+.navbar-menu > button.active {
+  color: inherit;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar-overlay {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar-burger {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    position: static;
     translate: 0 0;
-    visibility: visible;
-}
-.navbar-menu >button{
-    color: #252422;
+    width: auto;
     background: transparent;
-    padding: 0 8px;
-    
-}
-.navbar-menu > button.active{
-    color: inherit;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-
-@media only screen and (min-width: 600px){
-    .navbar{
-        justify-content: space-between;
-        padding: 0 0 0 16px;
-    }
-}
-@media only screen and (min-width : 600px){
-    .navbar-overlay{
-        display: none;
-    }
-}
-@media only screen and (min-width: 600px){
-    .navbar-burger{
-        display: none;
-    }
-}
-@media only screen and (min-width : 600px){
-    .navbar-menu{
-        position: static;
-        translate: 0 0;
-        width: auto;
-        background: transparent;
-        flex-direction: row;
-        visibility: visible;
-    }
+    flex-direction: row;
+    visibility: visible;
+  }
 }
